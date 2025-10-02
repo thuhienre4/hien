@@ -17,7 +17,14 @@ GOOGLE_CSE_ID = os.getenv("GOOGLE_CSE_ID")
 st.set_page_config(page_title="Affiliate Project Tracker", layout="wide")
 st.markdown("<h1 style='text-align: center; color: #f22c74;'>🚀 Affiliate Project Tracker</h1>", unsafe_allow_html=True)
 
-nganh = st.selectbox("🔎 Chọn ngành:", [...])
+nganh = st.selectbox("🔎 Chọn ngành:", [
+    "Technology", "Fashion", "Beauty", "Health", "Fitness",
+    "Travel", "Food", "Finance", "Education", "Gaming",
+    "Home & Garden", "Sports", "Automotive", "Pet Care",
+    "Software", "Web Hosting", "Marketing", "E-commerce",
+    "Insurance", "Real Estate", "Photography", "Books",
+    "Music", "Electronics", "Toys", "Jewelry", "Crafts"
+])
 keyword_bo_sung = st.text_input("🔍 Từ khóa thêm (tùy chọn)", "")
 keywords_multi = st.text_area("🔑 Nhập nhiều từ khóa (mỗi dòng một từ)", "")
 so_ket_qua = st.slider("📊 Số kết quả Google", 5, 50, 20)
